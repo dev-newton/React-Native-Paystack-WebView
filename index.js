@@ -52,11 +52,11 @@ Paystack ={
                                 },
                                 callback: function(response){
                                       var resp = {event:'successful', transactionRef:response.reference};
-                                      postMessage(JSON.stringify(resp))
+                                       ReactNativeWebView.postMessage(JSON.stringify(resp))
                                 },
                                 onClose: function(){
                                    var resp = {event:'cancelled'};
-                                   postMessage(JSON.stringify(resp))
+                                    ReactNativeWebView.postMessage(JSON.stringify(resp))
                                 }
                                 });
                                 handler.openIframe();
